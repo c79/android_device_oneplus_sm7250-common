@@ -342,9 +342,11 @@
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
 
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
     <!-- SQLite -->
     <string name="db_default_journal_mode">MEMORY</string>
     <string name="db_default_sync_mode">OFF</string>
     <string name="db_wal_sync_mode">OFF</string>
-
 </resources>
