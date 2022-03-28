@@ -54,7 +54,6 @@ persist.vendor.supernight.dump				u:object_r:ctl_default_prop:s0
 persist.vendor.oppo.rawhdr.dump				u:object_r:ctl_default_prop:s0
 persist.vendor.facebeauty.dump				u:object_r:ctl_default_prop:s0
 persist.camera.						u:object_r:vendor_camera_prop:s0
-ro.camera.							u:object_r:vendor_camera_prop:s0
 vendor.camera.						u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.overrideLogLevels			u:object_r:ctl_default_prop:s0
 persist.vendor.camera.logInfoMask				u:object_r:ctl_default_prop:s0
