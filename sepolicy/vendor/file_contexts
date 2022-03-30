@@ -1,7 +1,7 @@
 # Binaries
 /(vendor|system/vendor)/bin/dashd                       u:object_r:dashd_exec:s0
 /(vendor|system/vendor)/bin/opf-service                 u:object_r:opf_exec:s0
-/(vendor|system/vendor)/bin/tri-state-key-calibrate     u:object_r:tri-state-key-calibrate_exec:s0
+/(vendor|system/vendor)/bin/tri-state-key_daemon        u:object_r:tri-state-key_daemon_exec:s0
 /(vendor|system/vendor)/bin/vl53l1_daemon_main          u:object_r:vl53l1_daemon_main_exec:s0
 /(vendor|system/vendor)/bin/wifi-mac-generator          u:object_r:wifi-mac-generator_exec:s0
 
@@ -135,13 +135,6 @@
 /dev/skin_thermal         u:object_r:therm_device:s0
 /dev/stmvl53l1_ranging    u:object_r:vl53l1_device:s0
 
-# Display Modes
-/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm         u:object_r:sysfs_dm:s0
-
-#FPS
-/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dynamic_fps                               u:object_r:sysfs_dm:s0
-/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps                               u:object_r:sysfs_dm:s0
-
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus            u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service                              u:object_r:hal_secure_element_default_exec:s0
@@ -176,11 +169,23 @@
 /mnt/vendor/persist/engineermode(/.*)?               u:object_r:oem_file:s0
 /mnt/vendor/persist/OPDiagnose(/.*)?                 u:object_r:oem_file:s0
 
+# Proc files (DeviceExtras)
+/proc/touchpanel/force_game_switch_enable    u:object_r:proc_touchpanel:s0
+/proc/touchpanel/tpedge_limit_enable         u:object_r:proc_touchpanel:s0
+
 # Sys files
 /sys/module/fsc(/.*)?      u:object_r:sysfs_fsc:s0
 /sys/module/fuse(/.*)?     u:object_r:sysfs_fuse:s0
 /sys/module/proc(/.*)?     u:object_r:sysfs_dbg:s0
 /sys/module/tpd(/.*)?      u:object_r:sysfs_tpd:s0
+
+# Sys files (DeviceExtras)
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en    u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm               u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dynamic_fps         u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps         u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/880000.i2c/i2c-5/5-005a/leds/vibrator/level                     u:object_r:sysfs_vibrator:s0
+/sys/kernel/fast_charge/force_fast_charge                                                 u:object_r:sysfs_fastcharge:s0
 
 # Sys files (health)
 /sys/devices/platform/soc/c440000\.qcom\,spmi/spmi-0/spmi0-02/c440000\.qcom\,spmi\:qcom\,pm7250b\@2\:qpnp\,qg/power_supply/(?!.*wakeup\d+).*                                      u:object_r:vendor_sysfs_battery_supply:s0
@@ -190,6 +195,3 @@
 /sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/(msm_wma|msm_amrwb|msm_ape|msm_aac|msm_alac|msm_g711mlaw|msm_qcelp|msm_multi_aac|msm_g711alaw|msm_evrc|msm_mp3|msm_wmapro|msm_amrnb|msm_amrwbplus)/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
-
-# Vibrator
-/sys/devices/platform/soc/880000.i2c/i2c-5/5-005a/leds/vibrator/level               u:object_r:sysfs_vibrator:s0
