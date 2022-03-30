@@ -32,9 +32,9 @@
     <string name="tile_refresh_rate">屏幕刷新率</string>
     <string name="auto_refresh_rate_summary">让应用决定使用什么刷新率</string>
     <string name="auto_refresh_rate_title">自动刷新模式</string>
-    <string name="refresh_rate_summary">选择 60Hz 或 120Hz 峰值刷新</string>
-    <string name="refresh_rate_title">强制 120Hz 峰值刷新率</string>
-    <string name="refresh_rate_warning">强制使用 120Hz 会显着影响电池寿命</string>
+    <string name="refresh_rate_summary">选择 60Hz 或 90Hz 峰值刷新</string>
+    <string name="refresh_rate_title">强制 90Hz 峰值刷新率</string>
+    <string name="refresh_rate_warning">强制使用 90Hz 会显着影响电池寿命</string>
     <string name="fps_info_title">FPS 叠加</string>
     <string name="fps_info_summary">以每秒当前帧数显示叠加层</string>
     <string name="panel_mode_info">禁用面板模式需要重新启动</string>
