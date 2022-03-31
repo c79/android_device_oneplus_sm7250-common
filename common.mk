@@ -394,13 +394,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_omx.vendor
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk
-
 # OnePlus Apps
 PRODUCT_PACKAGES += \
     OnePlusCameraOverlay \
